@@ -1,5 +1,5 @@
 /*
- *  Character controller script.
+ *  Character controller script, by ScorpiusG.
  *  Allows the player to move the character with any traditional inputs with a 2D vector.
  *  Movement after input is based on camera rotation. Check the script to see the logic or if adjustments are needed.
  *  

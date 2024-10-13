@@ -1,6 +1,6 @@
 /*
- *  Camera pivot script.
- *  Allows the player to move the camera with the mouse or the controller's analog stick (usually the right one).\
+ *  Camera pivot script, by ScorpiusG.
+ *  Allows the player to move the camera with the mouse or the controller's analog stick (usually the right one).
  *  
  *  Attach this onto the PIVOT of the camera, NOT ON THE CAMERA ITSELF.
  *  

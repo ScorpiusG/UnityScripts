@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Makes the canvas automatically adjust to match the screen width or height based on ratio of current resolution versus the referenced one.
+/// </summary>
 public class CanvasAspectRatioAutoMatch : MonoBehaviour
 {
     private CanvasScaler canvasScaler;

@@ -1,5 +1,5 @@
 /*
- *  2D avatar script.
+ *  2D avatar script, by ScorpiusG.
  *  Manipulates the Sprite Renderer and Animator components based on avatar's facing direction and movement speed
  *  versus camera's rotation.
  *  
