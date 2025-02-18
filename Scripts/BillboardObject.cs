@@ -7,15 +7,34 @@ using UnityEngine;
 /// </summary>
 public class BillboardObject : MonoBehaviour
 {
-    public bool lockX, lockY, lockZ;
+    [SerializeField] private bool matchRotationOnStart = true;
+    [SerializeField] private bool matchRotationOnUpdate;
+    [SerializeField] private bool matchRotationOnLateUpdate;
+    [SerializeField] private bool matchRotationOnFixedUpdate;
+    [SerializeField] private bool lockX, lockY, lockZ;
     private Vector3 targetRotation;
+
+    private void Start()
+    {
+        if (matchRotationOnStart) MatchRotation();
+    }
 
     private void Update()
     {
-		MatchRotation();
+		if (matchRotationOnUpdate) MatchRotation();
     }
-	
-	public void MatchRotation()
+
+    private void LateUpdate()
+    {
+        if (matchRotationOnLateUpdate) MatchRotation();
+    }
+
+    private void FixedUpdate()
+    {
+        if (matchRotationOnFixedUpdate) MatchRotation();
+    }
+
+    public void MatchRotation()
 	{
         targetRotation = Camera.main.transform.rotation.eulerAngles;
         if (lockX) targetRotation.x = transform.rotation.eulerAngles.x;
