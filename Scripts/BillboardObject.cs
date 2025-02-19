@@ -8,6 +8,7 @@ using UnityEngine;
 public class BillboardObject : MonoBehaviour
 {
     [SerializeField] private bool matchRotationOnStart = true;
+    [SerializeField] private bool matchRotationOnEnable;
     [SerializeField] private bool matchRotationOnUpdate;
     [SerializeField] private bool matchRotationOnLateUpdate;
     [SerializeField] private bool matchRotationOnFixedUpdate;
@@ -17,6 +18,11 @@ public class BillboardObject : MonoBehaviour
     private void Start()
     {
         if (matchRotationOnStart) MatchRotation();
+    }
+
+    private void OnEnable()
+    {
+        if (matchRotationOnEnable) MatchRotation();
     }
 
     private void Update()
